@@ -1,0 +1,55 @@
+/*Переменные*/
+
+/* переменные цветом и типографики*/
+
+// $additional-color: #56C3B2;
+
+/*Шрифты*/
+$roboto-regular: "RobotoRegular", "Arial", sans-serif;
+$roboto-medium: "RobotoMedium", "Arial", sans-serif;
+$roboto-bold: "RobotoBold", "Arial", sans-serif;
+
+
+
+/*Цвета всех ссылок, прозрачный фон*/
+$gray-1:#727272;
+$gray-2:#212121;
+$gray-3:#b6b6b6;
+$green-1:#8cc34b;
+$blue-1:#03a9f4;
+
+$light-1:#fff;
+$light-2:#f6f6f6;
+
+$bg-1: #fff;
+$bg-2: #f6f7f2;
+
+
+/*размер шрифта*/
+$font-size-base: 16px;
+$lin-height-base: 24px/$font-size-base;
+
+/*брейкпоинты*/
+/*Mobile*/
+$desktop-point-widths: "(min-width: 1200px)";
+$laptop-point-widths: "(min-width: 868px)";
+$tablet-point-widths: "(min-width: 520px)";
+/*Dekstop*/
+$desktop-point-widths: "(max-width: 960px)";
+$laptop-point-widths: "(max-width: 768px)";
+$tablet-point-widths: "(max-width: 480px)";
+
+/*макс-ширина на устройствах*/
+$desktop-max-widths: 1200px;
+$laptop-max-widths: 992px;
+$tablet-max-widths: 768px;
+$phone-max-widths: 300px;
+
+/*ширины контейнера*/
+$desktop-inner-width: 940px;
+$laptop-inner-widths: 728px;
+$tablet-inner-widths: 480px;
+$phone-inner-widths: 300px;
+
+/*Ретина*/
+$retina: "(min-resolution: 144dpi), (min-resolution: 1.5dppx)";
