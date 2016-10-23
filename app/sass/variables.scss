@@ -2,31 +2,32 @@
 
 /* переменные цветом и типографики*/
 
-// $additional-color: #56C3B2;
-
 /*Шрифты*/
-$roboto-regular: "RobotoRegular", "Arial", sans-serif;
-$roboto-medium: "RobotoMedium", "Arial", sans-serif;
-$roboto-bold: "RobotoBold", "Arial", sans-serif;
+$gagalin-regular: "GagalinRegular", "Arial", sans-serif;
+$lifehack-medium: "LifehackMedium", "Arial", sans-serif;
+$ubuntu-regular: "UbuntuRegular", "Arial", sans-serif;
+$ubuntu-light: "UbuntuLight", "Arial", sans-serif;
+$ubuntu-medium: "UbuntuMedium", "Arial", sans-serif;
 
+/*Цвета, фон*/
 
+$dark-1: #2f3234;
+$dark-2: 1f2122;
+$yellow-1: #f9b43b;
+$orange-1: #e45028;
+$red-1: #c1401e;
+$light-1: #fff;
 
-/*Цвета всех ссылок, прозрачный фон*/
-$gray-1:#727272;
-$gray-2:#212121;
-$gray-3:#b6b6b6;
-$green-1:#8cc34b;
-$blue-1:#03a9f4;
-
-$light-1:#fff;
-$light-2:#f6f6f6;
 
 $bg-1: #fff;
-$bg-2: #f6f7f2;
+$bg-2: #f9b43b;
+$bg-3: rgna(47, 50, 52, .93);
+$bg-4: #f5f2ed;
+
 
 
 /*размер шрифта*/
-$font-size-base: 16px;
+$font-size-base: 14px;
 $lin-height-base: 24px/$font-size-base;
 
 /*брейкпоинты*/
@@ -46,7 +47,7 @@ $tablet-max-widths: 768px;
 $phone-max-widths: 300px;
 
 /*ширины контейнера*/
-$desktop-inner-width: 940px;
+$desktop-inner-width: 960px;
 $laptop-inner-widths: 728px;
 $tablet-inner-widths: 480px;
 $phone-inner-widths: 300px;

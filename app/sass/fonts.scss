@@ -1,48 +1,75 @@
 
 /* Шрифты */
-/* font-family: "RobotoRegular"; */
+/* font-family: "GagalinRegular"; */
 @font-face {
-	font-family: "RobotoRegular";
-	src: url("../fonts/RobotoRegular/roboto-regular.woff") format("woff"),
-	url("../fonts/RobotoRegular/roboto-regular.woff2") format("woff2");
+	font-family: "GagalinRegular";
+	src: url("../fonts/GagalinRegular/gagalin-regular-webfont.woff") format("woff"),
+	url("../fonts/GagalinRegular/gagalin-regular-webfont.woff2") format("woff2");
 	font-weight: normal;
 	font-style: normal;
 }
-/* font-family: "RobotoMedium"; */
+/* font-family: "LifehackMedium"; */
 @font-face {
-	font-family: "RobotoMedium";
-	src: url("../fonts/RobotoMedium/roboto-medium.woff") format("woff"),
-	url("../fonts/RobotoMedium/roboto-medium.woff2") format("woff2");
+	font-family: "LifehackMedium";
+	src: url("../fonts/LifehackMedium/lifehack_medium-webfont.woff") format("woff"),
+	url("../fonts/LifehackMedium/lifehack_medium-webfont.woff2") format("woff2");
 	font-weight: normal;
 	font-style: normal;
 }
-/* font-family: "RobotoBold"; */
+/* font-family: "UbuntuRegular"; */
 @font-face {
-	font-family: "RobotoBold";
-	src: url("../fonts/RobotoBold/roboto-bold.woff") format("woff"),
-	url("../fonts/RobotoBold/roboto-bold.woff2") format("woff2");
+	font-family: "UbuntuRegular";
+	src: url("../fonts/UbuntuRegular/ubuntu-regular-webfont.woff") format("woff"),
+	url("../fonts/UbuntuRegular/ubuntu-regular-webfont.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+/* font-family: "UbuntuLight"; */
+@font-face {
+	font-family: "UbuntuLight";
+	src: url("../fonts/UbuntuLight/ubuntu-light-webfont.woff") format("woff"),
+	url("../fonts/UbuntuLight/ubuntu-light-webfont.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+/* font-family: "UbuntuLight"; */
+@font-face {
+	font-family: "UbuntuMedium";
+	src: url("../fonts/UbuntuMedium/ubuntu-medium-webfont.woff") format("woff"),
+	url("../fonts/UbuntuMedium/ubuntu-medium-webfont.woff2") format("woff2");
 	font-weight: normal;
 	font-style: normal;
 }
 
-
-@mixin Roboto($style: "regular") {
+@mixin gagalin($style: "regular") {
 	@if ($style == "regular") {
-		font-family: "RobotoRegular";
+		font-family: "GagalinRegular";
 		}
 	@else if ($style == "medium") {
-		font-family: "RobotoMedium";
+		font-family: "GagalinMedium";
 	}
 	@else if($style == "bold") {
-		font-family: "RobotoBold";
+		font-family: "GagalinBold";
 	}
 }
 
-@mixin openSans($style: "bold") {
-	@if ($style == "bold") {
-		font-family: "OpenSansBold";
+@mixin lifehack($style: "medium") {
+	@if ($style == "medium") {
+		font-family: "LifehackMedium";
 		}
-	@else if($style == "semiBold") {
-		font-family: "OpenSansSemibold";
+	@else if($style == "bold") {
+		font-family: "Lifehackbold";
+	}
+}
+
+@mixin ubuntu($style: "regular") {
+	@if ($style == "regular") {
+		font-family: "UbuntuRegular";
+		}
+	@else if($style == "light") {
+		font-family: "UbuntuLight";
+	}
+	@else if($style == "medium") {
+		font-family: "UbuntuMedium";
 	}
 }

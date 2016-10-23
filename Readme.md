@@ -1,4 +1,4 @@
-# Личный проект «Tamplate»
+# Личный проект «Burger-shop»
 
 * Author: [Anatoliy Vershinin](https://up.htmlacademy.ru/htmlcss/14/user/81582).
 
