@@ -81,12 +81,10 @@
   margin: auto;
 }
 @mixin absolute-center-vertical {
-  position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
 %absolute-center-vertical {
-  position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -110,21 +108,4 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-@mixin btn() {
-  padding: 0 15px;
-  font-size: 13px;
-  line-height: 35px;
-  font-weight: 300;
-  font-family: $ubuntu-medium;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: $light-1;
-  background-color: $orange-1;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color .3s ease-out;
-  &:hover {
-    background-color: $red-1;
-  }
 }

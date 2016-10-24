@@ -31,6 +31,7 @@
 }
 .promo__container {
   @include absolute-center-vertical;
+  position: absolute;
   left: 0;
   right: 0;
 }
