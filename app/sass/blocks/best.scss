@@ -1,0 +1,5 @@
+.best {
+  position: relative;
+  background-image: url("../img/bg/bg3@1x.jpg");
+  @include cover();
+}

@@ -9,15 +9,23 @@ body {
   height: 100%;
   margin: 0;
   font-size: $font-size-base;
-  line-height: $lin-height-base;
+  line-height: 1.42;
   font-family: $ubuntu-light;
   font-weight: 300;
   color: $dark-1;
   background-color: $bg-1;
+  -webkit-font-smoothing: antialiased; // сглаживание шрифтов на webkit
 }
 img, video {
   max-width: 100%;
   height: auto;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: normal;
+}
+* {
+  box-sizing: border-box;
 }
 .visually-hidden {
   @include visually-hidden;

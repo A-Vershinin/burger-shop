@@ -1,0 +1,8 @@
+.burger {
+  background-color: $bg-2;
+  background: -moz-linear-gradient(top,  #f8b33b 0%, #eb8e38 40%, #eb8e38 70%, #f8b33b 100%);
+  background: -webkit-linear-gradient(top,  #f8b33b 0%,#eb8e38 40%,#eb8e38 70%,#f8b33b 100%);
+  background: linear-gradient(to bottom,  #f8b33b 0%,#eb8e38 40%,#eb8e38 70%,#f8b33b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8b33b', endColorstr='#f8b33b',GradientType=0 );
+
+}

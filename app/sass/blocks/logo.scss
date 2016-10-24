@@ -1,0 +1,9 @@
+.logo {
+  @include inline-block($valign: middle);
+  max-width: 92px;
+  max-height: 70px;
+  overflow: hidden;
+}
+.logo__img {
+
+}

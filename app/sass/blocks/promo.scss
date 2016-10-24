@@ -1,0 +1,58 @@
+.promo {
+  background-image: url("../img/bg/bg1@1x.jpg"),
+  url("../img/bg/bg2@1x.png");
+  @include cover();
+  position: relative;
+}
+.promo__header {
+  margin-bottom: 60px;
+  padding-top: 12px;
+  font-size: 0;
+}
+.promo__logo {
+  @include inline-block($valign: middle);
+  width: 10%;
+}
+.promo__nav {
+  @include inline-block($valign: middle);
+  @extend %clearfix;
+  width: 90%;
+  font-size: 0;
+  text-align: right;
+}
+.promo__btn {
+  @include inline-block($valign: middle);
+  @include btn();
+}
+.promo__content {
+  @include absolute-center-vertical;
+}
+.promo__content-inner {
+  @extend %clearfix;
+  width: 940px;
+  margin: 0 auto;
+  font-size: 0;
+}
+.promo__content-left {
+  @include inline-block($valign: middle);
+  width: 49.5%;
+}
+.promo__content-right {
+  @include inline-block($valign: middle);
+  width: 49.5%;
+  margin-top: 60px;
+}
+.promo__title {
+  font-size: 65px;
+  font-family: $lifehack-medium;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $light-1;
+  line-height: 1;
+}
+.promo__title-accent {
+  font-size: 72px;
+  font-family: $gagalin-regular;
+  color: $yellow-1;
+  line-height: 1.6;
+}

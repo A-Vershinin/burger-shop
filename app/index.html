@@ -45,17 +45,119 @@
   <svg display="none"></svg> <!-- svg спрайт -->
 
   <div class="wrapper">
-    <div class="wrapper-inner">
-      <section class="section promo"></section>
-      <section class="section best"></section>
+    <div class="wrapper__inner">
+      <section class="section promo">
+        <div class="container">
+          <header class="promo__header">
+            <div class="promo__logo">
+              <a class="logo" href="#">
+                <img class="logo__img" src="img/content/logo.svg" alt="Mr.Burger">
+              </a>
+            </div>
+            <div class="promo__nav">
+              <nav class="nav">
+                <ul class="nav__list">
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">О нас</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">Бургеры</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">Команда</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">Меню</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">Отзывы</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+              <a class="promo__btn"href="#">Заказать</a>
+            </div>
+          </header>
+          <div class="promo__content">
+            <div class="promo__content-inner">
+              <div class="promo__content-left">
+                <img class="promo__img" src="img/content/burger-promo@1x.png" alt="Бургер">
+              </div>
+              <div class="promo__content-right">
+                <h2 class="promo__title">
+                  <span class="promo__title-accent">
+                    Мы делаем</span>
+                    натуральные бургеры
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="arrow-scroll">
+            <a class="arrow" href="#">
+              <img src="img/icons/arrow-scroll.svg" alt="arrow-scroll"></a>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="section best">
+        <div class="container">
+          <h2 class="best__title">Мы лучшие</h2>
+          <ul class="best__list">
+            <li class="best__item">
+              <div class="best__icon">
+                <div class="best__icon-pic">
+                  <img class="best__img" src="img/decor/meat.svg" alt="Свежее мясо">
+                </div>
+              </div>
+              <div class="best__slogan">100% свежее мясо</div>
+              <div class="best__text-block">
+                <p class="best__text">Драма представляет собой
+                деструктивный цикл. Анапест представляет собой
+                анапест. Ямб неравномерен.</p>
+              </div>
+            </li>
+            <li class="best__item">
+              <div class="best__icon">
+                <div class="best__icon-pic">
+                  <img class="best__img" src="img/decor/hand.svg" alt="Ручная сборка">
+                </div>
+              </div>
+              <div class="best__slogan">Ручная  сборка</div>
+              <div class="best__text-block">
+                <p class="best__text">Драма представляет собой
+                деструктивный цикл. Анапест представляет собой
+                анапест. Первое полустишие притягивает сюжетный
+                реформаторский пафос.</p>
+              </div>
+            </li>
+            <li class="best__item">
+              <div class="best__icon">
+                <div class="best__icon-pic">
+                  <img class="best__img" src="img/decor/natural.svg" alt="Натуральные ингредиенты">
+                </div>
+              </div>
+              <div class="best__slogan">Натуральные ингредиенты</div>
+              <div class="best__text-block">
+                <p class="best__text">Драма представляет собой
+                деструктивный цикл. Анапест представляет собой
+                анапест.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
       <section class="section burger"></section>
       <section class="section team"></section>
       <section class="section menu"></section>
       <section class="section reviews"></section>
       <section class="section order"></section>
-      <section class="section map"></section>
+      <section class="section map">
+        <div class="yandex-map"></div>
+        <div class="footer"></div>
+      </section>
     </div>
-
   </div>
 
   <div class="modal-feedback"></div>

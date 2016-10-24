@@ -1,0 +1,48 @@
+.nav {
+  max-width: 610px;
+  @extend %ul-reset;
+  @include inline-block($valign: middle);
+}
+.nav__list {
+  @extend %ul-reset;
+  font-size: 0;
+}
+.nav__item {
+  @include inline-block($valign: middle);
+  font-size: 13px;
+  &:first-child {
+    .nav__link::after {
+      width: 0;
+      height: 0;
+    }
+  }
+}
+.nav__link {
+  position: relative;
+  display: block;
+  padding: 0 17px;
+  font-size: 13px;
+  line-height: 35px;
+  font-weight: 500;
+  font-family: $ubuntu-medium;
+  color: $light-1;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: transparent;
+  transition: color .3s ease-out;
+  &:hover {
+    color: $yellow-1;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 4px;
+    top: 50%;
+    left: 0;
+    margin-top: -2px;
+    background-color: $bg-1;
+    border-radius: 50%;
+  }
+}

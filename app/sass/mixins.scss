@@ -16,29 +16,9 @@
   }
 }
 @mixin container() {
-  width: 940px;
-  width: $desktop-max-widths;
+  width: $desktop-inner-width; //960
   margin: 0 auto;
   padding: 0 10px;
-
-}
-@mixin container() {
-  width: $phone-inner-widths; //300
-  margin: 0 auto;
-  padding: 0 10px;
-
-  @media screen and #{($tablet-point-widths)}{
-    width: $tablet-inner-widths; //480
-    padding: 0;
-  }
-  @media screen and #{($laptop-point-widths)} {
-    width: $laptop-inner-widths; //768
-    padding: 0 20px;
-  }
-  @media screen and #{($desktop-point-widths)} {
-    width: $desktop-inner-width; //940
-    padding: 0;
-  }
 }
 
 @mixin ul-reset() {
@@ -46,6 +26,12 @@
   padding: 0;
   list-style: none;
 }
+%ul-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 
 @mixin inline-block($valign: top) {
   display: inline-block;
@@ -94,6 +80,11 @@
   bottom: 0;
   margin: auto;
 }
+@mixin absolute-center-vertical {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 @mixin placeholder($color: #000) {
   &::-webkit-input-placeholder {
@@ -111,6 +102,23 @@
 }
 @mixin cover() {
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
+}
+@mixin btn() {
+  padding: 0 15px;
+  font-size: 13px;
+  line-height: 35px;
+  font-weight: 300;
+  font-family: $ubuntu-medium;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $light-1;
+  background-color: $orange-1;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color .3s ease-out;
+  &:hover {
+    background-color: $red-1;
+  }
 }

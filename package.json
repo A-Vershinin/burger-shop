@@ -2,17 +2,17 @@
   "name": "gllacy",
   "version": "0.1.0",
   "private": true,
-  "description": "Личный проект Gllacy для HTML академии",
+  "description": "Личный проект Burger-shop для Loftschool",
   "author": "Anatoliy Vershinin",
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:A-Vershinin/81582-gllacy.git"
+    "url": "git@github.com:A-Vershinin/burger-shop.git"
   },
   "bugs": {
-    "url": "https://github.com/A-Vershinin/81582-gllacy/issues"
+    "url": "https://github.com/A-Vershinin/burger-shop/issues"
   },
-  "homepage": "https://github.com/A-Vershinin/81582-gllacy",
+  "homepage": "https://github.com/A-Vershinin/burger-shop",
   "devDependencies": {
     "autoprefixer": "6.3.6",
     "browser-sync": "2.12.10",

@@ -10,9 +10,8 @@ $ubuntu-light: "UbuntuLight", "Arial", sans-serif;
 $ubuntu-medium: "UbuntuMedium", "Arial", sans-serif;
 
 /*Цвета, фон*/
-
 $dark-1: #2f3234;
-$dark-2: 1f2122;
+$dark-2: #1f2122;
 $yellow-1: #f9b43b;
 $orange-1: #e45028;
 $red-1: #c1401e;
@@ -23,11 +22,10 @@ $bg-1: #fff;
 $bg-2: #f9b43b;
 $bg-3: rgna(47, 50, 52, .93);
 $bg-4: #f5f2ed;
-
-
+$bg-5: #d5d5d5;
 
 /*размер шрифта*/
-$font-size-base: 14px;
+$font-size-base: 16px;
 $lin-height-base: 24px/$font-size-base;
 
 /*брейкпоинты*/
