@@ -1,8 +1,11 @@
 .promo {
+  position: relative;
   background-image: url("../img/bg/bg1@1x.jpg"),
   url("../img/bg/bg2@1x.png");
   @include cover();
-  position: relative;
+  .container {
+    position: static;
+  }
 }
 .promo__header {
   margin-bottom: 60px;
@@ -22,25 +25,26 @@
 }
 .promo__btn {
   @include inline-block($valign: middle);
-  @include btn();
+  width: 12%;
+  padding: 9px 0;
+  margin-left: 2%;
+}
+.promo__container {
+  @include absolute-center-vertical;
+  left: 0;
+  right: 0;
 }
 .promo__content {
-  @include absolute-center-vertical;
-}
-.promo__content-inner {
-  @extend %clearfix;
-  width: 940px;
-  margin: 0 auto;
-  font-size: 0;
+
 }
 .promo__content-left {
-  @include inline-block($valign: middle);
-  width: 49.5%;
+  float: left;
+  width: 50%;
 }
 .promo__content-right {
-  @include inline-block($valign: middle);
-  width: 49.5%;
-  margin-top: 60px;
+  float: right;
+  width: 50%;
+  padding-top: 115px;
 }
 .promo__title {
   font-size: 65px;

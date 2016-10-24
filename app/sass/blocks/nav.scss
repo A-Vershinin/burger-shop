@@ -33,6 +33,7 @@
   transition: color .3s ease-out;
   &:hover {
     color: $yellow-1;
+    text-decoration: underline;
   }
   &::after {
     content: "";

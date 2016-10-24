@@ -1,4 +1,5 @@
 .container {
   @include container();
-  // position: relative;
+  position: relative;
+  @extend %clearfix;
 }

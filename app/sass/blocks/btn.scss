@@ -1,0 +1,18 @@
+.btn {
+  @include inline-block($valign: top);
+  padding: 9px 0px;
+  font-size: 13px;
+  font-weight: 300;
+  font-family: $ubuntu-medium;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background: #e45028;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color .3s ease-out;
+  &:hover {
+    background-color: $red-1;
+  }
+}

@@ -85,6 +85,12 @@
   top: 50%;
   transform: translateY(-50%);
 }
+%absolute-center-vertical {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 
 @mixin placeholder($color: #000) {
   &::-webkit-input-placeholder {
