@@ -1,4 +1,87 @@
 .menu {
   background-image: url("../img/bg/bg5@1x.jpg");
   @include cover();
+  position: relative;
+}
+.menu__title {
+  position: absolute;
+  top: 13%;
+  left: 11%;
+  font-size: 72px;
+  font-weight: 400;
+  font-family: $gagalin-regular;
+  color: $light-1;
+}
+.menu-acco {
+  @extend %ul-reset;
+  @extend %clearfix;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.menu-acco__item {
+  float: left;
+  height: 100%;
+  @extend %clearfix;
+  &--active {
+    .menu-aсco__trigger-text {
+      color: $yellow-1;
+      text-align: left;
+    }
+    .menu-acco__content {
+      width: 540px;
+    }
+  }
+}
+.menu-acco__trigger {
+  position: relative;
+  display: block;
+  float: left;
+  width: 80px;
+  height: 100%;
+  @include cover();
+  &--meat {
+    background-image: url("../img/content/accord-tab1@1x.jpg");
+  }
+  &--veneg {
+    background-image: url("../img/content/accord-tab2@1x.jpg");
+  }
+  &--diet {
+    background-image: url("../img/content/accord-tab3@1x.jpg");
+  }
+}
+.menu-aсco__trigger-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -312px;
+  width: 650px;
+  height: 80px;
+  margin-top: -40px;
+  font-size: 40px;
+  font-family: $gagalin-regular;
+  color: $light-1;
+  white-space: nowrap;
+  text-align: center;
+  transform: rotate(-90deg);
+}
+.menu-acco__content {
+  float: left;
+  width: 0;
+  height: 100%;
+  color: $light-1;
+  background-color: $bg-3;
+  overflow: hidden;
+}
+.menu-acco__content-text {
+  margin: 0;
+  padding: 0;
+  width: 540px;
+  padding: 60px 30px 0 30px;
+  font-size: 14px;
+  line-height: 1.71;
+  font-family: $ubuntu-light;
+  font-weight: 300;
+
 }

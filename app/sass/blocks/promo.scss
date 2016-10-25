@@ -25,7 +25,7 @@
 }
 .promo__btn {
   @include inline-block($valign: middle);
-  width: 12%;
+  width: 11.2%;
   padding: 9px 0;
   margin-left: 2%;
 }
@@ -40,12 +40,12 @@
 }
 .promo__content-left {
   float: left;
-  width: 50%;
+  width: 51%;
 }
 .promo__content-right {
   float: right;
-  width: 50%;
-  padding-top: 115px;
+  width: 49%;
+  padding-top: 84px;
 }
 .promo__title {
   font-size: 65px;
