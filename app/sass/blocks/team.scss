@@ -1,4 +1,99 @@
 .team {
   background-image: url("../img/bg/bg4@1x.jpg");
   @include cover();
+  position: relative;
+}
+.team__wrap {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  // padding: 5% 2% 0% 7%;
+  padding: 0 30px 0 80px;
+  background-color: $bg-3;
+}
+.team__content {
+  position: absolute;
+  @extend %absolute-center-vertical;
+}
+.team__title {
+  margin-bottom: 80px;
+  font-size: 72px;
+  font-family: $gagalin-regular;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $yellow-1;
+}
+.team__acco {
+  @extend %ul-reset;
+}
+.team__acco-item {
+  margin-left: 18px;
+  margin-bottom: 40px;
+  &--active {
+    .team__acco-content {
+      display: block;
+    }
+    .team__acco-trigger {
+      color: $yellow-1;
+      &:before {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}
+.team__acco-trigger {
+  position: relative;
+  display: block;
+  margin-bottom: 16px;
+  padding-left: 3px;
+  font-size: 16px;
+  font-family: $gagalin-regular;
+  font-weight: 400;
+  text-decoration: none;
+  color: $light-1;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -19px;
+    top: 5px;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-top: 7px solid $yellow-1;
+    transform: rotate(0deg);
+    transition: all .4s;
+  }
+}
+.team__acco-content {
+  @extend %clearfix;
+  display: none;
+}
+.team__acco-pict {
+  float: left;
+  width: 100px;
+  max-width: 100px;
+  max-height: 100px;
+  margin-right: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.team__acco-desc {
+  width: 240px;
+  float: left;
+  color: $light-1;
+}
+.team__acco-title {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.1;
+  font-family: $ubuntu-bold;
+  font-weight: 700;
+}
+.team__acco-text {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.7;
 }

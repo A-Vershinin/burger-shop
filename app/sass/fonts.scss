@@ -32,11 +32,19 @@
 	font-weight: normal;
 	font-style: normal;
 }
-/* font-family: "UbuntuLight"; */
+/* font-family: "UbuntuMedium"; */
 @font-face {
 	font-family: "UbuntuMedium";
 	src: url("../fonts/UbuntuMedium/ubuntu-medium-webfont.woff") format("woff"),
 	url("../fonts/UbuntuMedium/ubuntu-medium-webfont.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+/* font-family: "UbuntuBold"; */
+@font-face {
+	font-family: "UbuntuBold";
+	src: url("../fonts/UbuntuMedium/ubuntu-bold-webfont.woff") format("woff"),
+	url("../fonts/UbuntuMedium/ubuntu-bold-webfont.woff2") format("woff2");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -71,5 +79,8 @@
 	}
 	@else if($style == "medium") {
 		font-family: "UbuntuMedium";
+	}
+	@else if($style == "bold") {
+		font-family: "UbuntuBold";
 	}
 }

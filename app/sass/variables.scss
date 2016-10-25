@@ -8,6 +8,7 @@ $lifehack-medium: "LifehackMedium", "Arial", sans-serif;
 $ubuntu-regular: "UbuntuRegular", "Arial", sans-serif;
 $ubuntu-light: "UbuntuLight", "Arial", sans-serif;
 $ubuntu-medium: "UbuntuMedium", "Arial", sans-serif;
+$ubuntu-bold: "UbuntuMedium", "Arial", sans-serif;
 
 /*Цвета, фон*/
 $dark-1: #2f3234;
@@ -21,11 +22,11 @@ $light-1: #fff;
 
 $bg-1: #fff;
 $bg-2: #f9b43b;
-$bg-3: rgna(47, 50, 52, .93);
+$bg-3: rgba(47, 50, 52, .93);
 $bg-4: #f5f2ed;
 $bg-5: #d5d5d5;
-$bg-6: rgba(227,80,40,.4);
-$bg-7: rgba(255,255,255,.9);
+$bg-6: rgba(227,80,40, .4);
+$bg-7: rgba(255, 255, 255, .9);
 
 /*размер шрифта*/
 $font-size-base: 16px;
