@@ -1,3 +1,102 @@
 .reviews {
   background-color: $bg-5;
 }
+.reviews__list {
+  @extend %ul-reset;
+  @extend %clearfix;
+  height: 100%;
+}
+.reviews__item {
+  width: 25%;
+  height: 50%;
+  float: left;
+  &:hover {
+    .reviews__hover {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+.reviews__block {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.reviews__pict {
+  @include cover();
+  @include absolute-center;
+  filter: grayscale(100%);
+  &--first {
+    background-image: url(../img/content/review7@1x.jpg);
+    @media #{$retina} {
+      background-image: url(../img/content/review7@2x.jpg);
+    }
+  }
+  &--second {
+    background-image: url(../img/content/review8@1x.jpg);
+    @media #{$retina} {
+      background-image: url(../img/content/review8@2x.jpg);
+    }
+  }
+  &--third {
+    background-image: url(../img/content/review4@1x.jpg);
+    @media #{$retina} {
+      background-image: url(../img/content/review4@2x.jpg);
+    }
+  }
+  &--fourth {
+    background-image: url(../img/content/review2@1x.jpg);
+    @media #{$retina} {
+      background-image: url(../img/content/review2@2x.jpg);
+    }
+  }
+  &--fifth {
+    background-image: url(../img/content/review6@1x.jpg);
+    @media #{$retina} {
+      background-image: url(../img/content/review6@2x.jpg);
+    }
+  }
+  &--sixth {
+    background-image: url(../img/content/review5@1x.jpg);
+    @media #{$retina} {
+      background-image: url(../img/content/review5@2x.jpg);
+    }
+  }
+  &--seventh {
+    background-image: url(../img/content/review3@1x.jpg);
+    @media #{$retina} {
+      background-image: url(../img/content/review3@2x.jpg);
+    }
+  }
+  &--eighth {
+    background-image: url(../img/content/review1@1x.jpg);
+    @media #{$retina} {
+      background-image: url(../img/content/review1@2x.jpg);
+    }
+  }
+}
+.reviews__hover {
+  @include absolute-center;
+  padding: 50px 30px 0 20px;
+  background-color: $bg-8;
+  transform: scale(0.9);
+  opacity: 0;
+  transition: all .3s;
+}
+.reviews__hover-title {
+  font-size: 14px;
+  font-family: $gagalin-regular;
+  color: $light-1;
+}
+.reviews__hover-text {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.71;
+  font-family: $ubuntu-light;
+  color: $light-1;
+}
+.reviews__hover-link {
+  padding: 9px 15px;
+  color: $light-1;
+  background-color: $dark-1;
+}
