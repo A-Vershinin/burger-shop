@@ -26,11 +26,13 @@
     // left: 0;
     fill: red;
   }
-  & svg path {
+  & svg {
     fill: red;
   }
   &:hover {
     opacity: 1;
+    transform: scale(1.07);
+    transition: all .5s;
   //   color: red;
   //   svg {
   //     fill: red;

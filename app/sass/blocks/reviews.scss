@@ -26,53 +26,10 @@
   @include cover();
   @include absolute-center;
   filter: grayscale(100%);
-  &--first {
-    background-image: url(../img/content/review7@1x.jpg);
-    @media #{$retina} {
-      background-image: url(../img/content/review7@2x.jpg);
-    }
-  }
-  &--second {
-    background-image: url(../img/content/review8@1x.jpg);
-    @media #{$retina} {
-      background-image: url(../img/content/review8@2x.jpg);
-    }
-  }
-  &--third {
-    background-image: url(../img/content/review4@1x.jpg);
-    @media #{$retina} {
-      background-image: url(../img/content/review4@2x.jpg);
-    }
-  }
-  &--fourth {
-    background-image: url(../img/content/review2@1x.jpg);
-    @media #{$retina} {
-      background-image: url(../img/content/review2@2x.jpg);
-    }
-  }
-  &--fifth {
-    background-image: url(../img/content/review6@1x.jpg);
-    @media #{$retina} {
-      background-image: url(../img/content/review6@2x.jpg);
-    }
-  }
-  &--sixth {
-    background-image: url(../img/content/review5@1x.jpg);
-    @media #{$retina} {
-      background-image: url(../img/content/review5@2x.jpg);
-    }
-  }
-  &--seventh {
-    background-image: url(../img/content/review3@1x.jpg);
-    @media #{$retina} {
-      background-image: url(../img/content/review3@2x.jpg);
-    }
-  }
-  &--eighth {
-    background-image: url(../img/content/review1@1x.jpg);
-    @media #{$retina} {
-      background-image: url(../img/content/review1@2x.jpg);
-    }
+  & img {
+    height: 100%;
+    -moz-object-fit: cover;
+    object-fit: cover;
   }
 }
 .reviews__hover {

@@ -1,13 +1,16 @@
 .best {
   position: relative;
   background-image: url("../img/bg/bg3@1x.jpg");
-  background-color: $bg-4; 
+  background-color: $bg-4;
   @include cover();
     .container {
       position: relative;
       top: 50%;
       transform: translateY(-50%);
     }
+  @media #{$retina} {
+    background-image: url("../img/bg/bg3@2x.jpg");
+  }
 }
 .best__title {
   margin-bottom: 70px;

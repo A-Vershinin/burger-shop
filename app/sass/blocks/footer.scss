@@ -3,6 +3,9 @@
   height: 60px;
   background-image: url("../img/bg/bg7@1x.jpg");
   @include cover();
+  @media #{$retina} {
+    background-image: url("../img/bg/bg7@2x.jpg");
+  }
 }
 .footer__contacts {
   float: left;

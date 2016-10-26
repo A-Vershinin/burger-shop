@@ -3,6 +3,9 @@
   background-color: $bg-5;
   @include cover();
   position: relative;
+  @media #{$retina} {
+    background-image: url("../img/bg/bg5@2x.jpg");
+  }
 }
 .menu__title {
   position: absolute;
@@ -44,12 +47,21 @@
   @include cover();
   &--meat {
     background-image: url("../img/content/accord-tab1@1x.jpg");
+    @media #{$retina} {
+      background-image: url("../img/content/accord-tab1@2x.jpg");
+    }
   }
   &--veneg {
     background-image: url("../img/content/accord-tab2@1x.jpg");
+    @media #{$retina} {
+      background-image: url("../img/content/accord-tab2@2x.jpg");
+    }
   }
   &--diet {
     background-image: url("../img/content/accord-tab3@1x.jpg");
+    @media #{$retina} {
+      background-image: url("../img/content/accord-tab3@2x.jpg");
+    }
   }
 }
 .menu-aсco__trigger-text {

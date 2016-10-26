@@ -7,6 +7,10 @@
   .container {
     position: static;
   }
+  @media #{$retina} {
+    background-image: url("../img/bg/bg1@2x.jpg"),
+    url("../img/bg/bg2@2x.png");
+  }
 }
 .promo__header {
   margin-bottom: 60px;

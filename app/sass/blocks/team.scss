@@ -3,6 +3,9 @@
   background-color: $dark-1;
   @include cover();
   position: relative;
+  @media #{$retina} {
+    background-image: url("../img/bg/bg4@2x.jpg");
+  }
 }
 .team__wrap {
   position: absolute;
