@@ -2,3 +2,7 @@
   background-image: url("../img/bg/map@1x.jpg");
   @include cover();
 }
+.yandex-map {
+  width: 100%;
+  height: calc(100% - 60px);
+}

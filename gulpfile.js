@@ -113,7 +113,7 @@ gulp.task("images", function() {
 });
 // Оптимизируем svg картинки и собираем спрайт
 gulp.task("svg-symbols", function() {
-  return gulp.src("build/img/icons/*.svg")
+  return gulp.src("build/img/**/*.svg")
     .pipe(svgmin())
     .pipe(svgstore({
       inlineSvg: true
