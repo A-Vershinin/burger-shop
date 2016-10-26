@@ -1,6 +1,9 @@
 .map {
   background-image: url("../img/bg/map@1x.jpg");
   @include cover();
+  @media #{$retina} {
+    background-image: url("../img/bg/map@2x.jpg");
+  }
 }
 .yandex-map {
   width: 100%;

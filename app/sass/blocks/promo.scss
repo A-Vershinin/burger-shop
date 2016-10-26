@@ -2,6 +2,7 @@
   position: relative;
   background-image: url("../img/bg/bg1@1x.jpg"),
   url("../img/bg/bg2@1x.png");
+  background-color: $bg-3;
   @include cover();
   .container {
     position: static;

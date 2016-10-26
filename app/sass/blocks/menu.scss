@@ -1,5 +1,6 @@
 .menu {
   background-image: url("../img/bg/bg5@1x.jpg");
+  background-color: $bg-5;
   @include cover();
   position: relative;
 }

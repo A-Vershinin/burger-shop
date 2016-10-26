@@ -1,7 +1,7 @@
 .team {
   background-image: url("../img/bg/bg4@1x.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: $dark-1;
+  @include cover();
   position: relative;
 }
 .team__wrap {

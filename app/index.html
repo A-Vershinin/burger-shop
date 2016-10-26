@@ -418,7 +418,9 @@
         <ul class="reviews__list">
           <li class="reviews__item">
             <div class="reviews__block">
-              <div class="reviews__pict reviews__pict--first"></div>
+              <div class="reviews__pict reviews__pict--first">
+                <!-- <img src="img/content/review7@1x.jpg" data-object-fit="cover"> -->
+              </div>
               <div class="reviews__hover">
                 <h4 class="reviews__hover-title">Константин Спилберг</h4>
                 <p class="reviews__hover-text">
@@ -530,7 +532,69 @@
           </li>
         </ul>
       </section>
-      <section class="section order"></section>
+      <section class="section order">
+        <div class="container">
+          <h2 class="order__title">Закажите доставку</h2>
+          <form class="order__form" id="order__form" action="#" method="post">
+            <div class="order__form-left">
+              <div class="order__form-block order__form-block--name">
+                <div class="order__form-block-container">
+                  <label class="order__label" for="name-field">Имя</label>
+                  <input class="order__input" type="text" name="name" id="name-field" required>
+                </div>
+                <div class="order__form-block-container">
+                  <label class="order__label" for="tell-field">Телефон</label>
+                  <input class="order__input" type="text" name="tell" id="tell-field" required>
+                </div>
+              </div>
+              <div class="order__form-block">
+                <label class="order__label" for="street-field">Улица</label>
+                <input class="order__input" type="text" name="street" id="street-field" required>
+              </div>
+              <div class="order__form-block-address">
+                <div class="order__form-home">
+                  <label class="order__label" for="home-field">Дом</label>
+                  <input class="order__input" type="text" name="home" id="home-field" required>
+                </div>
+                <div class="order__form-house">
+                  <label class="order__label" for="house-field">Корпус</label>
+                  <input class="order__input" type="text" name="house" id="house-field">
+                </div>
+                <div class="order__form-flat">
+                  <label class="order__label" for="flat-field">Квартира</label>
+                  <input class="order__input" type="text" name="flat" id="flat-field" required>
+                </div>
+                <div class="order__form-floor">
+                  <label class="order__label" for="floor-field">Этаж</label>
+                  <input class="order__input" type="text" name="floor" id="floor-field">
+                </div>
+              </div>
+            </div>
+            <div class="order__form-right">
+              <div class="order__form-block">
+                <label for="order__label-area">Комментарий
+                <textarea class="order__input order__input--comment" id="order__comment"
+                  name="comment" rows="5" cols="50"></textarea>
+                </label>
+              </div>
+              <div class="order__form-block">
+                <input class="order__radio" type="radio" name="cashback" id="payment-field">
+                <label class="order__label-point" for="payment-field">Потребуется сдача</label>
+                <input class="order__radio" type="radio" name="cashback" id="cashback-field">
+                <label class="order__label-point" for="cashback-field">Оплата по карте</label>
+              </div>
+              <div class="order__form-block">
+                <input class="order__checkbox" type="checkbox" name="one-callback" id="one-callback-field" checked>
+                <label class="order__label-check" for="one-callback-field">Не перезванивать</label>
+              </div>
+              <div class="order__form-block">
+                <input class="order__btn-submit btn" type="submit" value="Заказать">
+                <input class="order__btn-reset btn" type="reset" value="Очистить">
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
       <section class="section map">
         <div class="yandex-map">
 
@@ -542,7 +606,11 @@
                 Санкт-Петербург, ул.Бабушкина, д.12/1, 15
               </div>
               <a class="footer__tell" href="tel:+78123771377">
-                <i class="footer__tell-icon"></i>+7 (812) 377-13-77
+                <i class="footer__tell-icon">
+                  <svg width="12" height="11">
+                    <use xlink:href="/img/svg-symbols.svg#phone"></use>
+                  </svg>
+                </i>+7 (812) 377-13-77
               </a>
             </div>
             <div class="footer__socials">

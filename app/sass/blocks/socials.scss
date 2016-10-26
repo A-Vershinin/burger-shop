@@ -5,11 +5,14 @@
 }
 .social__item {
   @include inline-block($valign: middle);
+  margin-left: 20px;
+  &:first-child {
+    margin-left: 0;
+  }
 }
 .social__link {
     position: relative;
     display: block;
-    margin-left: 10px;
     text-decoration: none;
     box-sizing: border-box;
     opacity: 0.3;
@@ -26,12 +29,12 @@
   & svg path {
     fill: red;
   }
-  // &:hover {
-  //   opacity: 1;
+  &:hover {
+    opacity: 1;
   //   color: red;
   //   svg {
   //     fill: red;
   //     stroke: blue;
   //   }
-  // }
+  }
 }

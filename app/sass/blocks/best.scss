@@ -1,6 +1,7 @@
 .best {
   position: relative;
   background-image: url("../img/bg/bg3@1x.jpg");
+  background-color: $bg-4; 
   @include cover();
     .container {
       position: relative;
