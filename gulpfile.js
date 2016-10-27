@@ -115,9 +115,13 @@ gulp.task("images", function() {
 gulp.task("svg-symbols", function() {
   return gulp.src("build/img/**/*.svg")
     .pipe(svgmin())
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
+    // .pipe(cheerio({
+    //     run: function ($) {
+    //       $('[fill]').removeAttr('fill');
+    //     },
+    //     parserOptions: { xmlMode: true }
+    //   }))
+    .pipe(svgstore({inlineSvg: true}))
     .pipe(rename("svg-symbols.svg"))
     .pipe(gulp.dest("build/img"));
 });

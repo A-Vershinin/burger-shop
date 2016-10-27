@@ -38,6 +38,9 @@
   max-width: 97px;
   max-height: 90px;
   margin-bottom: 30px;
+  &--meat {
+    fill: $orange-1;
+  }
 }
 .best__slogan {
   margin-bottom: 5px;

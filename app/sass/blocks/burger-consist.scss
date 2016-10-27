@@ -24,6 +24,9 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  & svg {
+    fill: $light-1;
+  }
 }
 .burger-consist__pict {
   padding-bottom: 5px;
@@ -59,4 +62,36 @@
   vertical-align: middle;
   padding: 8px 0;
   text-align: left;
+}
+.burger-consist__img {
+  &--beef {
+    & svg {
+      fill: $red-2;
+    }
+  }
+  &--buns {
+    & svg {
+      fill: $yellow-1;
+    }
+  }
+  &--salad {
+    & svg {
+      fill: $green-1;
+    }
+  }
+  &--sauce {
+    & svg {
+      fill: $red-2;
+    }
+  }
+  &--cucumber {
+    & svg {
+      fill: $green-1;
+    }
+  }
+  &--cheese {
+    & svg {
+      fill: $yellow-1;
+    }
+  }
 }

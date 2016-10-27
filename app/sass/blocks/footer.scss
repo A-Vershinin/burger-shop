@@ -26,6 +26,9 @@
 }
 .footer__tell-icon {
   margin-right: 8px;
+  & svg {
+    fill: $orange-1;
+  }
 }
 .footer__socials {
   float: right;

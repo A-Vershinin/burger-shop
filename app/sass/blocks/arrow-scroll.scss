@@ -15,4 +15,7 @@
 }
 .arrow {
   text-decoration: none;
+  & svg {
+    fill: $light-1;
+  }
 }

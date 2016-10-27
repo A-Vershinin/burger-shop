@@ -11,32 +11,19 @@
   }
 }
 .social__link {
-    position: relative;
-    display: block;
-    text-decoration: none;
-    box-sizing: border-box;
-    opacity: 0.3;
-  // background-repeat: no-repeat;
-  // background-position: center center;
-  // background-size: cover;
-  // background-color: transparent;
-  & svg {
-    // position: absolute;
-    // top: 0;
-    // left: 0;
-    fill: red;
-  }
-  & svg {
-    fill: red;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  box-sizing: border-box;
+  opacity: 0.3;
+  &--vk, &--fb, &--inst, &--tw {
+    & svg {
+      fill: $light-1;
+    }
   }
   &:hover {
     opacity: 1;
     transform: scale(1.07);
     transition: all .5s;
-  //   color: red;
-  //   svg {
-  //     fill: red;
-  //     stroke: blue;
-  //   }
   }
 }
