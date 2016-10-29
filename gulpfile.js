@@ -142,8 +142,9 @@ gulp.task("extras", function() {
 });
 // Оптимизируем js-common
 gulp.task("js-common", function() {
-  return gulp.src("app/js/common.js") //берём файл common.js в app/js
-  .pipe(gulp.dest("build/js"))
+  return gulp.src("app/js/common.js") //берём все файлы .js в app/js
+  // .pipe(concat("common.js")) //склеиваем их в common.js
+  .pipe(gulp.dest("build/js")) //Выгружаем результаты в папку build/css
   .pipe(uglify())  //cжимаем common.js
   .pipe(rename("common.min.js")) //переименовываем файл common.js в common.min.js
   .pipe(gulp.dest("build/js"))  //Выгружаем результаты в папку build/css

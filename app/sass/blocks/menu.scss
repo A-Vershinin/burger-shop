@@ -31,7 +31,7 @@
   &--active {
     .menu-aсco__trigger-text {
       color: $yellow-1;
-      text-align: left;
+      top: 60%;
     }
     .menu-acco__content {
       width: 540px;
@@ -44,6 +44,12 @@
   float: left;
   width: 80px;
   height: 100%;
+  transition: all .5s;
+  &:hover {
+    .menu-aсco__trigger-text {
+      color: $yellow-1;
+    }
+  }
   @include cover();
   &--meat {
     background-image: url("../img/content/accord-tab1@1x.jpg");
@@ -66,17 +72,17 @@
 }
 .menu-aсco__trigger-text {
   position: absolute;
-  top: 50%;
+  top: 25%;
   left: 50%;
   margin-left: -312px;
   width: 650px;
   height: 80px;
-  margin-top: -40px;
+  // margin-top: -40px;
   font-size: 40px;
   font-family: $gagalin-regular;
   color: $light-1;
   white-space: nowrap;
-  text-align: center;
+  transition: all .5s;
   transform: rotate(-90deg);
 }
 .menu-acco__content {
@@ -86,6 +92,7 @@
   color: $light-1;
   background-color: $bg-3;
   overflow: hidden;
+  transition: all .5s;
 }
 .menu-acco__content-text {
   margin: 0;
