@@ -154,7 +154,9 @@ gulp.task("js-libs", function() {
   // return gulp.src("app/bower_modules/**/*.js") //берём все файлы .js в bower_modules
   return gulp.src([
     "app/bower_modules/modernizer/modernizr.js",
-    "app/bower_modules/picturefill/dist/picturefill.js"
+    "app/bower_modules/picturefill/dist/picturefill.js",
+    "app/bower_modules/object-fit-polyfill/dist/object-fit-polyfill.js",
+    "app/bower_modules/owl.carousel/dist/owl.carousel.min.js"
   ])
   .pipe(concat("libs.min.js"))
   .pipe(uglify())  //cжимаем libs.min.js

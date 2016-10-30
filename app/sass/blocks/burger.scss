@@ -10,7 +10,6 @@
   }
 }
 .burger__slider {
-
 }
 .burgers__slide {
   position: relative;
@@ -22,21 +21,20 @@
   font-size: 0;
 }
 .burger__slider-left {
-  @include inline-block($valign: top);
+  @include inline-block($valign: middle);
   width: 52%;
   margin-right: 2%;
-  margin-left: -20px;
-  padding-top: 35px;
+  // padding-top: 35px;
   max-width: 480px;
   max-height: 348px;
 }
 .burger__slider-right {
-  @include inline-block($valign: top);
+  @include inline-block($valign: middle);
   width: 46%;
 }
 .burger__title {
   margin-bottom: 40px;
-  font-size: 72px;
+  font-size: 70px;
   line-height: 1;
   font-family: $gagalin-regular;
   font-weight: 400;

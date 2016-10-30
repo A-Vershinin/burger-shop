@@ -4,6 +4,7 @@
     "normalize-css": "normalize.css#^4.2.0",
     "modernizer": "^2.8.2",
     "picturefill": "^3.0.2",
-    "object-fit-polyfill": "^0.1.0"
+    "object-fit-polyfill": "^0.1.0",
+    "owl.carousel": "^2.2.0"
   }
 }

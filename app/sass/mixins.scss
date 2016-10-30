@@ -109,3 +109,10 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+@mixin text-overflow() {
+  //красиво обрезает текст однострочный
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
