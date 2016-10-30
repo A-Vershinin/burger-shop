@@ -6,6 +6,15 @@
 }
 .fixed-menu__item {
   margin-bottom: 5px;
+  &--active {
+    .fixed-menu__link {
+      &::before {
+        width: 14px;
+        height: 14px;
+        opacity: 1;
+      }
+    }
+  }
 }
 .fixed-menu__link {
   position: relative;
