@@ -5,6 +5,8 @@
     "modernizer": "^2.8.2",
     "picturefill": "^3.0.2",
     "object-fit-polyfill": "^0.1.0",
-    "owl.carousel": "^2.2.0"
+    "owl.carousel": "^2.2.0",
+    "jquery.inputmask": "^3.3.3",
+    "fancybox": "^2.1.5"
   }
 }

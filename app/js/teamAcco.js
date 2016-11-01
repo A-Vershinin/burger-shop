@@ -1,4 +1,4 @@
-// "use strict"; // ES5
+"use strict"; // ES5
 
 // (function() { //область видимости
 //   // team__accordion VanillaJS
@@ -20,32 +20,32 @@
 //   }
 // })();
 
-$(document).ready(function() {
-  // team__accordion jQuery
-  $(".team__acco-trigger").on("click", function(e) {
-    e.preventDefault();
-    var $this = $(this),
-        container = $this.closest(".team__acco"),
-        otherContent = container.find(".team__acco-content-wrap"),
-        items = container.find(".team__acco-item"),
-        item = $this.closest(".team__acco-item"),
-        content = item.find(".team__acco-content-wrap"),
-        reqHeight = item.find(".team__acco-content").outerHeight();
-
-    if (!item.hasClass('team__acco-item--active')) {
-      items.removeClass('team__acco-item--active');
-      item.addClass('team__acco-item--active');
-      otherContent.css({
-        'height': 0
-      });
-      content.css({
-        'height': reqHeight
-      });
-    } else {
-      item.removeClass('team__acco-item--active');
-      content.css({
-        'height': 0
-      });
-    }
-  });
-});
+// $(document).ready(function() {
+//   // team__accordion jQuery
+//   $(".team__acco-trigger").on("click", function(e) {
+//     e.preventDefault();
+//     var $this = $(this),
+//         container = $this.closest(".team__acco"),
+//         otherContent = container.find(".team__acco-content-wrap"),
+//         items = container.find(".team__acco-item"),
+//         item = $this.closest(".team__acco-item"),
+//         content = item.find(".team__acco-content-wrap"),
+//         reqHeight = item.find(".team__acco-content").outerHeight();
+//
+//     if (!item.hasClass('team__acco-item--active')) {
+//       items.removeClass('team__acco-item--active');
+//       item.addClass('team__acco-item--active');
+//       otherContent.css({
+//         'height': 0
+//       });
+//       content.css({
+//         'height': reqHeight
+//       });
+//     } else {
+//       item.removeClass('team__acco-item--active');
+//       content.css({
+//         'height': 0
+//       });
+//     }
+//   });
+// });

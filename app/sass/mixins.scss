@@ -8,11 +8,21 @@
   }
 }
 /*Плейсхолдер*/
+
 %clearfix {
   &::before, &::after {
     content: "";
     display: block;
     clear: both;
+  }
+}
+@media #{$tablet-point-widths} { //не срабатывает
+  %clearfix {
+    &::before, &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
   }
 }
 @mixin container() {
@@ -115,4 +125,14 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+@media #{$tablet-point-widths} {
+
+}
+@media #{$laptop-point-widths} {
+
+}
+@media #{$desktop-point-widths} {
+
 }

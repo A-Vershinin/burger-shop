@@ -46,7 +46,9 @@
   </script>
 
 </head>
-
+<!-- $(function() { // input mask
+  $('.phone-mask').inputmask('+7 (999) 999 99 99');
+}); -->
 
 <body>
   <!-- [inf lt IE 9]
@@ -660,7 +662,7 @@
           <div class="team__content">
             <h2 class="team__title">Команда</h2>
             <ul class="team__acco">
-              <li class="team__acco-item team__acco-item--active">
+              <li class="team__acco-item">
                 <a class="team__acco-trigger" href="#">Дэниэл Джеймс</a>
                 <div class="team__acco-content-wrap">
                   <div class="team__acco-content">
@@ -832,7 +834,7 @@
                   устоять, невозможно забыть... Никогда не думал,
                   что булочки могут быть такими мягкими, котлетка
                   такой сочной, а сыр таким расплавленным.</p>
-                <a class="reviews__hover-link btn" href="#">Подробнее</a>
+                <a class="reviews__hover-link btn" href="#full-review">Подробнее</a>
               </div>
             </div>
           </li>
@@ -852,7 +854,7 @@
                   устоять, невозможно забыть... Никогда не думал,
                   что булочки могут быть такими мягкими, котлетка
                   такой сочной, а сыр таким расплавленным.</p>
-                <a class="reviews__hover-link btn" href="#">Подробнее</a>
+                <a class="reviews__hover-link btn" href="#full-review">Подробнее</a>
               </div>
             </div>
           </li>
@@ -872,7 +874,7 @@
                   устоять, невозможно забыть... Никогда не думал,
                   что булочки могут быть такими мягкими, котлетка
                   такой сочной, а сыр таким расплавленным.</p>
-                <a class="reviews__hover-link btn" href="#">Подробнее</a>
+                <a class="reviews__hover-link btn" href="#full-review">Подробнее</a>
               </div>
             </div>
           </li>
@@ -892,7 +894,7 @@
                   устоять, невозможно забыть... Никогда не думал,
                   что булочки могут быть такими мягкими, котлетка
                   такой сочной, а сыр таким расплавленным.</p>
-                <a class="reviews__hover-link btn" href="#">Подробнее</a>
+                <a class="reviews__hover-link btn" href="#full-review">Подробнее</a>
               </div>
             </div>
           </li>
@@ -912,7 +914,7 @@
                   устоять, невозможно забыть... Никогда не думал,
                   что булочки могут быть такими мягкими, котлетка
                   такой сочной, а сыр таким расплавленным.</p>
-                <a class="reviews__hover-link btn" href="#">Подробнее</a>
+                <a class="reviews__hover-link btn" href="#full-review">Подробнее</a>
               </div>
             </div>
           </li>
@@ -932,7 +934,7 @@
                   устоять, невозможно забыть... Никогда не думал,
                   что булочки могут быть такими мягкими, котлетка
                   такой сочной, а сыр таким расплавленным.</p>
-                <a class="reviews__hover-link btn" href="#">Подробнее</a>
+                <a class="reviews__hover-link btn" href="#full-review">Подробнее</a>
               </div>
             </div>
           </li>
@@ -952,7 +954,7 @@
                   устоять, невозможно забыть... Никогда не думал,
                   что булочки могут быть такими мягкими, котлетка
                   такой сочной, а сыр таким расплавленным.</p>
-                <a class="reviews__hover-link btn" href="#">Подробнее</a>
+                <a class="reviews__hover-link btn" href="#full-review">Подробнее</a>
               </div>
             </div>
           </li>
@@ -972,7 +974,7 @@
                   устоять, невозможно забыть... Никогда не думал,
                   что булочки могут быть такими мягкими, котлетка
                   такой сочной, а сыр таким расплавленным.</p>
-                <a class="reviews__hover-link btn" href="#">Подробнее</a>
+                <a class="reviews__hover-link btn" href="#full-review">Подробнее</a>
               </div>
             </div>
           </li>
@@ -990,7 +992,7 @@
                 </div>
                 <div class="order__form-block-container">
                   <label class="order__label" for="tell-field">Телефон</label>
-                  <input class="order__input" type="text" name="tell" id="tell-field" required>
+                  <input class="order__input phone-mask" type="text" name="tell" id="tell-field" required>
                 </div>
               </div>
               <div class="order__form-block">
@@ -1121,7 +1123,9 @@
     </li>
   </ul>
 
-  <div class="modal-feedback"></div>
+  <div class="popup full-review" id="full-review"></div>
+  <div class="popup status-popup" id="success"></div>
+  <div class="popup status-popup" id="error"></div>
 
   <!-- Query -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
@@ -1136,8 +1140,6 @@
   <!--  libs.js -->
   <script src="js/libs.min.js" async></script>
   <!-- custom scripts.js -->
-  <script src="js/teamAcco.js" async></script>
-  <!-- <script src="js/menuAcco.js" async></script> -->
   <script src="js/common.js" async></script>
 
 </body>
