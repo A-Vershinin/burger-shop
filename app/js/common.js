@@ -52,9 +52,8 @@ $(document).ready(function() {
 					}
 				}
 			},
-			tap: function (e) { // скрол по тачу для мобильных
+			touchstart : function (e) { // скрол по тачу для мобильных
 				console.log(e);
-        // todo
 			},
 			swipe: function (e) {
 				console.log(e);
@@ -189,9 +188,72 @@ $(document).ready(function() {
 			fitToView: false,
 			padding: 0
 		});
-		$('full-review__close').on('click', function(e) {
+		$('.full-review__close').on('click', function(e) {
 			e.preventDefault;
 			$.fancybox.close();
 		});
+		// $('.burger__btn ').fancybox({
+		// 	type: 'inline',
+		// 	maxWidth: 240,
+		// 	fitToView: false,
+		// 	padding: 0
+		// });
+	});
+
+	$(function() { //status-popup
+	  $('#order__form').on('sumbit', function(e) {
+	    e.preventDefault();
+	    var form = $(this),
+	      formData = form.serialize();
+	    $.post('../mail.php', formData, function(data) {
+	      var popup = data.status ? '#success' : '#error';
+	      $.fancybox.open([{
+	        href: popup
+	      }], {
+	        type: 'inline',
+	        maxWidth: 240,
+	        fitToView: false,
+	        padding: 0,
+	        afterClose: function() {
+	          form.trigger('reset');
+	        }
+	      });
+	    });
+	  });
+		$('.status-popup__close').on('click', function(e) {
+	    e.preventDefault();
+	    $.fancybox.close();
+	  });
+	});
+
+	$(function() { //ynadex-map
+	  ymaps.ready(init);
+	  var myMap;
+
+	  function init() {
+	    myMap = new ymaps.Map("map", {
+	      center: [59.93916998692174, 30.309015096732622],
+	      zoom: 11,
+	      controls: [],
+	    });
+	    var coords = [
+	        [59.94554327989287, 30.38935262114668],
+	        [59.91142323563909, 30.50024587065841],
+	        [59.88693161784606, 30.319658102103713],
+	        [59.97033574821672, 30.315194906302924],
+	      ],
+	      myCollection = new ymaps.GeoObjectCollection({}, {
+	        draggable: false,
+	        iconLayout: 'default#image',
+	        iconImageHref: '../img/icons/map-marker.svg',
+	        iconImageSize: [46, 57],
+	        iconImageOffset: [-26, -52]
+	      });
+	    for (var i = 0; i < coords.length; i++) {
+	      myCollection.add(new ymaps.Placemark(coords[i]));
+	    }
+	    myMap.geoObjects.add(myCollection);
+	    myMap.behaviors.disable('scrollZoom');
+	  }
 	});
 });

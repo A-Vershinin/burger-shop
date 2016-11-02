@@ -1,0 +1,38 @@
+.full-review {
+  position: relative;
+  padding: 25px 20px;
+}
+.full-review__close {
+  width: 15px;
+  height: 15px;
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  opacity: 0.7;
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+  }
+  & svg {
+    fill: $orange-1;
+  }
+}
+.full-review__title {
+  margin-bottom: 25px;
+  font-size: 14px;
+  font-family: $gagalin-regular;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: $dark-1;
+}
+.full-review__text {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  font-family: $ubuntu-light;
+  color: $dark-1;
+}

@@ -154,15 +154,18 @@ gulp.task("js-libs", function() {
   // return gulp.src("app/bower_modules/**/*.js") //берём все файлы .js в bower_modules
   return gulp.src([
     "app/bower_modules/modernizer/modernizr.js",
+    "app/bower_modules/jquery/dist/jquery.min.js",
     "app/bower_modules/picturefill/dist/picturefill.js",
     "app/bower_modules/object-fit-polyfill/dist/object-fit-polyfill.js",
     "app/bower_modules/owl.carousel/dist/owl.carousel.min.js",
     "app/bower_modules/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js",
     "app/bower_modules/fancybox/source/jquery.fancybox.js"
   ])
-  .pipe(concat("libs.min.js"))
+  .pipe(concat("libs.js"))
+  .pipe(gulp.dest("build/js"))
+  .pipe(rename("libs.min.js"))
   .pipe(uglify())  //cжимаем libs.min.js
-  .pipe(gulp.dest("build/js")); //выгружаем в build/js
+  .pipe(gulp.dest("build/js")) //выгружаем в build/js
 });
 //Оптимизируем css-библиотеки
 gulp.task("css-libs", function() {

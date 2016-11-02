@@ -21,12 +21,14 @@
   position: relative;
   width: 100%;
   height: 100%;
+
 }
 .reviews__pict {
   @include cover();
   @include absolute-center;
   filter: grayscale(100%);
   & img {
+    width: 100%;
     height: 100%;
     -moz-object-fit: cover;
     object-fit: cover;
