@@ -2,7 +2,7 @@
 
 $(document).ready(function() {
 
-	$(function () { // One Page Scroll
+	$(function() { // One Page Scroll
 
 		var sections = $('.section'),
 			display = $('.wrapper__inner'),
@@ -96,7 +96,7 @@ $(document).ready(function() {
 		});
 	});
 
-	$(function () { // Burger slider
+	$(function() { // Burger slider
 
 		var burgerOwl = $('.burgers__slide').owlCarousel({
 			items: 1,
@@ -117,11 +117,11 @@ $(document).ready(function() {
 		});
 	});
 
-	$(function () { // team__accordion
+	$(function() { // team__accordion
 
 		 $(".team__acco-trigger").on("click", function(e) {
 		  e.preventDefault();
-			console.log("111");
+
 		    var $this = $(this),
 		        container = $this.closest(".team__acco"),
 		        otherContent = container.find(".team__acco-content-wrap"),
@@ -148,7 +148,7 @@ $(document).ready(function() {
 		  });
 	});
 
-	$(function () { // menu-accordion
+	$(function() { // menu-accordion
 		$('.menu-acco__trigger').on('click', function (e) {
 			e.preventDefault();
 			var $this = $(this),
@@ -177,11 +177,11 @@ $(document).ready(function() {
 		});
 	});
 
-	$(function () { // input mask
+	$(function() { // input mask
 	  $('.phone-mask').inputmask('+7 (999) 999 99 99');
 	});
 
-	$(function () { // popup
+	$(function() { // popup
 		$('.reviews__hover-link').fancybox({
 			type: 'inline',
 			maxWidth: 460,
@@ -198,32 +198,6 @@ $(document).ready(function() {
 		// 	fitToView: false,
 		// 	padding: 0
 		// });
-	});
-
-	$(function() { //status-popup
-	  $('#order__form').on('sumbit', function(e) {
-	    e.preventDefault();
-	    var form = $(this),
-	      formData = form.serialize();
-	    $.post('../mail.php', formData, function(data) {
-	      var popup = data.status ? '#success' : '#error';
-	      $.fancybox.open([{
-	        href: popup
-	      }], {
-	        type: 'inline',
-	        maxWidth: 240,
-	        fitToView: false,
-	        padding: 0,
-	        afterClose: function() {
-	          form.trigger('reset');
-	        }
-	      });
-	    });
-	  });
-		$('.status-popup__close').on('click', function(e) {
-	    e.preventDefault();
-	    $.fancybox.close();
-	  });
 	});
 
 	$(function() { //ynadex-map
@@ -255,5 +229,26 @@ $(document).ready(function() {
 	    myMap.geoObjects.add(myCollection);
 	    myMap.behaviors.disable('scrollZoom');
 	  }
+	});
+
+	$(function() {
+
+	  $('#order__form').on('submit', function(e) {
+	    e.preventDefault();
+			var fio = $('input[name=name]').val()
+	    // var form = $(this),
+	    //   	formData = form.serialize();
+	    $.ajax({
+	      url: '../',
+	      type: 'POST',
+	      data: {
+					name: fio
+				}
+	    }).done(function(data) {
+				console.log(data);
+				console.log("111");
+			})
+	  });
+
 	});
 });

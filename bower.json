@@ -1,5 +1,5 @@
 {
-  "name": "template",
+  "name": "Burger-shop",
   "dependencies": {
     "normalize-css": "normalize.css#^4.2.0",
     "modernizer": "^2.8.2",
