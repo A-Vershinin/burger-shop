@@ -192,12 +192,6 @@ $(document).ready(function() {
 			e.preventDefault;
 			$.fancybox.close();
 		});
-		// $('.burger__btn ').fancybox({
-		// 	type: 'inline',
-		// 	maxWidth: 240,
-		// 	fitToView: false,
-		// 	padding: 0
-		// });
 	});
 
 	$(function() { //ynadex-map
@@ -233,22 +227,38 @@ $(document).ready(function() {
 
 	$(function() {
 
-	  $('#order__form').on('submit', function(e) {
+		$('#order__form').on('submit', function(e) {
 	    e.preventDefault();
-			var fio = $('input[name=name]').val()
-	    // var form = $(this),
-	    //   	formData = form.serialize();
+	    var form = $(this),
+	      	formData = form.serialize();
 	    $.ajax({
-	      url: '../',
+	      url: 'mail.php',
 	      type: 'POST',
-	      data: {
-					name: fio
-				}
-	    }).done(function(data) {
-				console.log(data);
-				console.log("111");
+				dataType: 'json',
+	      data: formData,
+					success: function(data) {
+						var popup = data.status ? '#success-popup' : '#error-popup';
+
+						$.fancybox.open([
+							{href: popup}
+						], {
+							type: 'inline',
+							maxWidth: 250,
+							fitToView: false,
+							padding: 0,
+							afterClose: function () {
+								form.trigger('reset');
+							}
+						})
+					},
+					error: function(err) {
+						console.log(err);
+					}
 			})
 	  });
-
+		$('.status-popup__close').on('click', function(e) {
+			e.preventDefault;
+			$.fancybox.close();
+		});
 	});
 });

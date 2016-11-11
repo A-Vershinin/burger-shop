@@ -1,14 +1,7 @@
 .status-popup {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background-color: rgba(47,50,52,.93);
-  display: none;
+  width: 240px;
 }
 .status-popup__inner {
-  width: 240px;
   padding: 20px;
   text-align: center;
 }

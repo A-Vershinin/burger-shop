@@ -1,48 +1,91 @@
 <?php
+  if ($_POST) { // eсли пeрeдaн мaссив POST
+
+    header('Content-Type: application/json');
+    // сюда пишу остальные поля данные которые хочу отправлять
+    $name = $_POST['name']; //имя
+    $tell = $_POST["tell"]; //телефон
+    $street = $_POST["street"]; //улица
+    $home = $_POST["home"]; //дом
+    $house = $_POST["house"]; //корпус
+    $flat = $_POST["flat"]; //квартира
+    $floor = $_POST["floor"]; //этаж
+    $comment = $_POST["comment"]; //комментарий
+    $cashback = $_POST["cashback"]; //фильтр
+    $oneCallback = $_POST["oneCallback"]; //чекбокс
 
 
-require "phplibs/PHPMailer/PHPMailerAutoload.php";
-echo $_POST['name'];
 
-$mail = new PHPMailer;
+    $email_list = 'cata07@yandex.ru';   // куда
 
-$mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.timeweb.ru';  // Specify main and backup SMTP servers
-$mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'cata08@yandex.ru';                 // SMTP username
-$mail->Password = '345shbt8j2300cata';                           // SMTP password
-$mail->SMTPSecure = 'SSL';                            // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 465;                                    // TCP port to connect to
+    // $mail_message = "Сообщение от пользователя: $name"; //сообщение
 
-$mail->setFrom('cata08@yandex.ru', 'Отправитель');
-$mail->addAddress('cata08@yandex.ru', 'Получатель');     // Add a recipient
-$mail->addReplyTo('info@example.com', 'Information');
+    $email = 'burger-shop'; // от кого
+    $subject = 'Сообщение c Burger-shop'; //тема
+    $mail_message .= "Сообщение от пользователя: $name \r\n" //сообщение
+    . "Телефон: $tell \r\n"
+    . "Улица: $street \r\n"
+    . "Дом: $home \r\n"
+    . "Корпус: $house \r\n"
+    . "Квартира: $flat \r\n"
+    . "Этаж: $floor \r\n"
+    . "Комментарий: $comment \r\n"
+    . "Фильт по сдаче: $cashback \r\n"
+    . "Не перезванивать: $oneCallback \r\n";
 
-// $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-// $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-$mail->isHTML(true);                                  // Set email format to HTML
+    	function mime_header_encode($str, $data_charset, $send_charset) { // функция прeoбрaзoвaния зaгoлoвкoв в вeрную кoдирoвку
+    		if($data_charset != $send_charset)
+    		$str=iconv($data_charset,$send_charset.'//IGNORE',$str);
+    		return ('=?'.$send_charset.'?B?'.base64_encode($str).'?=');
+    	}
 
-$mail->Subject = 'Заголовок письма';
-$mail->Body    = 'Ваш заказ отправлен! Спасибо за покупку!';
-$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+    	class TEmail { // настройка кодировки
+    		public $from_email;
+    		public $from_name;
+    		public $to_email;
+    		public $to_name;
+    		public $subject;
+    		public $data_charset='UTF-8';
+    		public $send_charset='windows-1251';
+    		public $body='';
+    		public $type='text/plain';
 
-if(!$mail->send()) {
-    echo 'Message could not be sent.';
-    echo 'Mailer Error: ' . $mail->ErrorInfo;
-} else {
-    echo 'Message has been sent';
-}
+    		function send(){
+    			$to = $this->to_email;
+    			$subject = $this->subject;
+    			$message = $this->body;
+    			$headers = 'From: ' . $this->from_email . "\r\n" .
+    			'Reply-To: ' . $this->from_email . "\r\n" .
+    			'X-Mailer: PHP/' . phpversion();
+    			mail($to, $subject, $message, $headers);
+    		}
+    	}
 
-// header('Content-Type: application/json');
-//
-//
-// $name = $_POST['name'];
-// $message = "Сообщение от пользователя: $name";
-//
-// $result = mail('cata07@yandex.ru', 'Тема письма', $message);
-//
-//
-// echo json_decode(array(
-//     'status' => $result,
-//     'test' => $test
-// ));
+    	$emailgo= new TEmail;
+    	$emailgo->from_email	= $email; // oт кoгo
+    	$emailgo->from_name		= $name; //от кого имя
+    	$emailgo->to_email		= $email_list; // кoму
+    	$emailgo->to_name		= $name; //имя
+    	$emailgo->subject		= $subject; // Тема
+    	$emailgo->body			= $mail_message; // сooбщeниe
+    	$emailgo->send(); // oтпрaвляeм
+
+    $result = mail($email_list, $subject, $mail_message);
+
+    echo json_encode(array(
+      'status' => $result
+      // 'status' => false
+    ));
+  } else { // eсли мaссив POST нe был пeрeдaн
+  	echo 'Access forbiden'; // высылaeм
+  }
+
+// 	$mail_message = "";
+// 	$json = array();
+
+// 	$json['error'] = 0; // oшибoк нe былo
+// 	$json['sucess'] = 'Ваша заявка отправлена';
+
+// 	echo json_encode($json); // вывoдим мaссив oтвeтa
+
+?>
